@@ -1,0 +1,11 @@
+<h1>Cursos Cadastrados</h1>
+<ul>
+  <% cursos.forEach(curso => { %>
+    <li><%= curso.nome %> - <%= curso.duracao %> horas - R$ <%= curso.preco %>
+      <form action="/cursos/<%= curso._id %>/delete" method="POST">
+        <button type="submit">Excluir</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+<a href="/">Voltar</a>
